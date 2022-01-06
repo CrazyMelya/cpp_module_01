@@ -15,12 +15,12 @@ void	Karen::debug(void)
 
 void	Karen::info(void)
 {
-	std::cout << "I cannot believe adding extra bacon cost more money. You don’t put enough! If you did I would not have to ask for it!" << std::endl;
+	std::cout << "I cannot believe adding extra bacon cost more money." << std::endl << "You don’t put enough! If you did I would not have to ask for it!" << std::endl;
 }
 
 void	Karen::warning(void)
 {
-	std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming here for years and you just started working here last month." << std::endl;
+	std::cout << "I think I deserve to have some extra bacon for free." << std::endl << "I’ve been coming here for years and you just started working here last month." << std::endl;
 }
 
 void	Karen::error(void)
@@ -42,14 +42,17 @@ void	Karen::complain(std::string level)
 		case 0:
 			std::cout << "[ DEBUG ]" << std::endl;
 			(this->*funcs[0])();
+			std::cout << std::endl;
 		
 		case 1:
 			std::cout << "[ INFO ]" << std::endl;
 			(this->*funcs[1])();
+			std::cout << std::endl;
 
 		case 2:
 			std::cout << "[ WARNING ]" << std::endl;
 			(this->*funcs[2])();
+			std::cout << std::endl;
 
 		case 3:
 			std::cout << "[ ERROR ]" << std::endl;
